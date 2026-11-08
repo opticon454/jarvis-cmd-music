@@ -1,5 +1,7 @@
 # jarvis-cmd-music
 
+> **Archived on 20261108 and no longer maintained.** This package chose a default music service for "play X" and handed the request to that service's own package. With [Music Assistant](https://github.com/music-assistant) as the music integration point, Music Assistant picks the service itself, so this layer is not needed. The per-service packages it called (Plex, Emby, YouTube Music, Tidal) are archived too; Spotify and Pandora remain for power users. Use [jarvis-cmd-music-assistant](https://github.com/alexberardi/jarvis-cmd-music-assistant) instead.
+
 A [Jarvis](https://github.com/alexberardi/jarvis-server) Pantry package that makes "play Korn" work whichever music
 service you use. It holds no catalogue and no login: it picks the service, then hands the request to that service's own
 package.

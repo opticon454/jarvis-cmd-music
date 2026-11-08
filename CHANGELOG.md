@@ -1,5 +1,9 @@
 # Changelog
 
+## 20261108-1900
+
+- Archived: Jarvis uses Music Assistant as its music integration point. See the note at the top of the README.
+
 ## 20261108-1700
 
 - Added Plex and Emby to the services `play_music` can choose, beside Spotify, YouTube Music and Tidal.
