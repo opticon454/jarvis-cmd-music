@@ -1,0 +1,33 @@
+name: "music"
+display_name: "Music"
+description: "Say \"play Korn\" and Jarvis plays it on your default music service (Spotify, YouTube Music, Tidal), or the one you name. Each service is its own package; this one picks between them."
+version: "0.1.0"
+min_jarvis_version: "0.9.0"
+license: Apache-2.0
+author:
+  github: "opticon454"
+categories: ["media"]
+keywords: ["play", "music", "song", "album", "artist", "playlist", "default music service"]
+
+components:
+  - type: command
+    name: play_music
+    path: commands/play_music/command.py
+
+secrets:
+  - key: MUSIC_USER_PROVIDER
+    scope: user
+    value_type: string
+    required: false
+    is_sensitive: false
+    enum_values: [spotify, youtube_music, tidal]
+    description: "Your own default music service. Leave empty to use the household's."
+    friendly_name: "My default music service"
+  - key: MUSIC_DEFAULT_PROVIDER
+    scope: integration
+    value_type: string
+    required: false
+    is_sensitive: false
+    enum_values: [spotify, youtube_music, tidal]
+    description: "The household's default music service, used when you have not set your own."
+    friendly_name: "Household default music service"

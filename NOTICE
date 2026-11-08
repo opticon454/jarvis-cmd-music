@@ -1,0 +1,7 @@
+jarvis-cmd-music
+Copyright 2026 opticon454
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This package only chooses a music provider and hands the request to that provider's own package. It is not affiliated
+with or endorsed by Spotify, YouTube, Google or TIDAL.
