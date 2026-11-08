@@ -5,7 +5,7 @@ from __future__ import annotations
 from typing import Callable, Optional
 
 # id -> how it is spoken. A provider package supplies the command "<id>_play" taking query, kind and artist.
-PROVIDERS = {"spotify": "Spotify", "youtube_music": "YouTube Music", "tidal": "Tidal"}
+PROVIDERS = {"spotify": "Spotify", "youtube_music": "YouTube Music", "tidal": "Tidal", "plex": "Plex", "emby": "Emby"}
 
 
 def command_for(provider: str) -> str:

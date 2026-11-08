@@ -20,7 +20,7 @@ secrets:
     value_type: string
     required: false
     is_sensitive: false
-    enum_values: [spotify, youtube_music, tidal]
+    enum_values: [spotify, youtube_music, tidal, plex, emby]
     description: "Your own default music service. Leave empty to use the household's."
     friendly_name: "My default music service"
   - key: MUSIC_DEFAULT_PROVIDER
@@ -28,6 +28,6 @@ secrets:
     value_type: string
     required: false
     is_sensitive: false
-    enum_values: [spotify, youtube_music, tidal]
+    enum_values: [spotify, youtube_music, tidal, plex, emby]
     description: "The household's default music service, used when you have not set your own."
     friendly_name: "Household default music service"

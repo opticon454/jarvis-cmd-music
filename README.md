@@ -18,7 +18,7 @@ The service is chosen in this order:
 1. The one you name: "play Korn **on Tidal**".
 2. Your own default.
 3. The household default.
-4. With none set, the first installed service (Spotify, YouTube Music, Tidal).
+4. With none set, the first installed service (Spotify, YouTube Music, Tidal, Plex, Emby).
 
 A service you name is never swapped: if its package is not installed, Jarvis says so. If your own default is not installed,
 the household default is used; if neither is installed, Jarvis says so.
@@ -33,14 +33,14 @@ the household default is used; if neither is installed, Jarvis says so.
 
 ## Writing a service package
 
-Provide a command named `<id>_play`, where `<id>` is `spotify`, `youtube_music` or `tidal` (add a new id to
+Provide a command named `<id>_play`, where `<id>` is `spotify`, `youtube_music`, `tidal`, `plex` or `emby` (add a new id to
 `PROVIDERS` in `music_shared/providers.py` and to the two `enum_values` lists). It takes:
 
-| Parameter | Meaning                                                                                  |
-| --------- | ---------------------------------------------------------------------------------------- |
-| `query`   | What to play.                                                                            |
+| Parameter | Meaning                                                                                                 |
+| --------- | ------------------------------------------------------------------------------------------------------- |
+| `query`   | What to play.                                                                                           |
 | `kind`    | Optional: `track`, `album`, `artist` or `playlist`. Left out when unsure: prefer an exact artist match. |
-| `artist`  | Optional, narrows a song or album.                                                       |
+| `artist`  | Optional, narrows a song or album.                                                                      |
 
 It returns a normal `CommandResponse`, which is spoken as it is.
 

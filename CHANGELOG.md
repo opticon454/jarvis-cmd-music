@@ -1,5 +1,9 @@
 # Changelog
 
+## 20261108-1700
+
+- Added Plex and Emby to the services `play_music` can choose, beside Spotify, YouTube Music and Tidal.
+
 ## 20261108-1600
 
 - Added the `play_music` command: "play Korn" plays on the user's default music service, or the one named.

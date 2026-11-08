@@ -44,7 +44,7 @@ class PlayMusicCommand(IJarvisCommand):
     def description(self) -> str:
         return (
             "Play music: a song, album, artist or playlist, on the user's default music service. query is what to "
-            "play. Only set provider when the user names a service (Spotify, YouTube Music, Tidal). Use for any "
+            "play. Only set provider when the user names a service (Spotify, YouTube Music, Tidal, Plex, Emby). Use for any "
             "'play ...' request about music, e.g. 'play Korn' or 'play Freak on a Leash by Korn'."
         )
 
@@ -66,7 +66,7 @@ class PlayMusicCommand(IJarvisCommand):
             JarvisParameter("artist", "string", required=False,
                             description="The artist, when the user named one for a song or album"),
             JarvisParameter("provider", "string", required=False, enum_values=list(PROVIDERS),
-                            description="Only when the user names a service: spotify, youtube_music or tidal"),
+                            description="Only when the user names a service: spotify, youtube_music, tidal, plex or emby"),
         ]
 
     @property
